@@ -8,11 +8,10 @@ class Solution:
         
         current = head
         prev = head
-        total_len = 0
         
-        while(n >= 0):
+        
+        for i in range(n):
             current = current.next
-            n -= 1
             
         
         # if n == len(list_node)
@@ -20,10 +19,9 @@ class Solution:
             return head.next
         
                 
-        while current != None:
+        while current.next != None:
             current = current.next
             prev = prev.next
         
         prev.next = prev.next.next
         return head
-        
